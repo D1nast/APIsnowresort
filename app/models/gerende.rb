@@ -1,0 +1,2 @@
+class Gerende < ApplicationRecord
+end

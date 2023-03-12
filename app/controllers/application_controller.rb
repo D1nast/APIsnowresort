@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-    def load
+    def test
         list=Gerende.all
         # list="JSONの出力はできてるよ"
         render json:list
