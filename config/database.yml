@@ -15,15 +15,15 @@
 # gem "pg"
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+ adapter: postgresql
+ encoding: unicode
+# For details on connection pooling, see Rails configuration guide
+# https://guides.rubyonrails.org/configuring.html#database-pooling
+ pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
-  database: resort_development
+ <<: *default
+ database: resort_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -56,8 +56,8 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: resort_test
+ <<: *default
+ database: resort_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -79,8 +79,22 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
+# インストール時の初期設定↓
+# production:
+#   <<: *default
+#   database: resort_production
+#   username: resort
+#   password: <%= ENV["RESORT_DATABASE_PASSWORD"] %>
+
+
+# ↓設定
+# https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToPostgreSQLInstance.html
 production:
-  <<: *default
-  database: resort_production
-  username: resort
-  password: <%= ENV["RESORT_DATABASE_PASSWORD"] %>
+ <<: *default
+ database: resort
+ username: postgres
+ password: Grecier24
+ host: database-1.cwbrr9nune5j.ap-northeast-1.rds.amazonaws.com
+ port: 5432
+# RDSインスタンスのDBに接続できるコマンド

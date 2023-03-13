@@ -1,0 +1,9 @@
+
+①本番環境でRailsを起動して、パブリックアクセス可能なRDSを作成して接続
+    「RAILS_ENV=production rails dbconsole」でRDSにアクセスできるか
+
+②自身が接続しているデータベース名は下記コマンドで確認できる
+    SELECT current_database() AS database_name;
+    ※開発環境でのDB名は「resort_development」
+
+③本番環境にどうやってデータベースを作成すれば良いのか？
