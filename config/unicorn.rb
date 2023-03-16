@@ -1,6 +1,6 @@
 # rootパスのディレクトリを指定
-# root_path = File.expand_path('../../', __FILE__)
-root_path = "/var/rails/APIsnowresort"
+root_path = File.expand_path('../../', __FILE__)
+# root_path = "/var/rails/APIsnowresort"
 # アプリケーションサーバの性能を決定する
 worker_processes 2
 # アプリケーションの設置されているディレクトリを指定
