@@ -92,9 +92,9 @@ test:
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToPostgreSQLInstance.html
 production:
  <<: *default
- database: resort
+ database: postgres
  username: postgres
  password: Grecier24
- host: database-1.cwbrr9nune5j.ap-northeast-1.rds.amazonaws.com
+ host: database-2.cwbrr9nune5j.ap-northeast-1.rds.amazonaws.com
  port: 5432
 # RDSインスタンスのDBに接続できるコマンド
