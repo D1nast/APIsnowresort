@@ -80,7 +80,7 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 
-インストール時の初期設定↓
+# インストール時の初期設定↓
 production:
   <<: *default
   database: resort_production
