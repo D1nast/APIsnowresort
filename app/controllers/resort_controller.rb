@@ -8,7 +8,7 @@ class ResortController < ApplicationController
         render json:list
     end
     def db
-        list=Gredende.all
+        list=Gerende.all
         render json:list
     end
 end
