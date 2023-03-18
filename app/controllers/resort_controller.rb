@@ -7,4 +7,8 @@ class ResortController < ApplicationController
         list="テスト中"
         render json:list
     end
+    def
+        list=Gredende.all
+        render json:list
+    end
 end
