@@ -10,12 +10,7 @@ class AdminController < ApplicationController
     def show
         data = Gerende.find(params[:id])
         render json: data
-    end
-    def update
-    end
-    def destroy
-    end
-
+    end 
     private
      def index_params
        params.require(:gerende).permit(:id, :name, :explain1)
