@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/load', to: 'resort#index'
   get '/db', to: 'resort#db'
   get '/index', to: 'admin#index' 
+  get '/index/:id', to: 'admin#show'
 end

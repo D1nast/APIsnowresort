@@ -5,7 +5,7 @@ class AdminController < ApplicationController
     end
     def create
     end
-    def edit
+    def show
         data = Gerende.find(params[:id])
         render json: data
     end
