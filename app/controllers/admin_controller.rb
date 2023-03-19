@@ -4,6 +4,8 @@ class AdminController < ApplicationController
         render json:data
     end
     def create
+        Gerende.create(index_params)
+        head :created
     end
     def show
         data = Gerende.find(params[:id])
@@ -14,4 +16,8 @@ class AdminController < ApplicationController
     def destroy
     end
 
+    private
+     def index_params
+       params.require(:gerende).permit(:name, :explain1)
+     end
 end
