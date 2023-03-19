@@ -18,6 +18,6 @@ class AdminController < ApplicationController
 
     private
      def index_params
-       params.require(:Gerende).permit(:id,:name,:explain1)
+       params.require(:gerende).permit(:id,:name,:explain1)
      end
 end
