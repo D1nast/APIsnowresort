@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/index/:id', to: 'admin#show'
   get '/edit/:id', to: 'admin#show'
   post '/index', to: 'admin#create'
+  post '/edit/:id/update', to: 'admin#update'
 end

@@ -11,7 +11,7 @@ class AdminController < ApplicationController
         data = Gerende.find(params[:id])
         render json: data
     end 
-    def edit
+    def update
         Gerende.update(index_params)
         head :created
     end
