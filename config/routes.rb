@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   get '/test', to: 'resort#test'
   get '/load', to: 'resort#index'
   get '/db', to: 'resort#db'
+  #ゲレンデ一覧のデータ取得
+  get '/list1', to: 'resort#list1'
+  get '/list2', to: 'resort#list2'
+  get '/list3', to: 'resort#list3'
+  get '/list4', to: 'resort#list4'
   #以下編集画面
   get '/index', to: 'admin#index' 
   get '/index/:id', to: 'admin#show'
