@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   get '/list2', to: 'resort#list2'
   get '/list3', to: 'resort#list3'
   get '/list4', to: 'resort#list4'
-  #以下編集画面
+  #以下管理画面
   get '/index', to: 'admin#index' 
   get '/index/:id', to: 'admin#show'
+  get '/edit/:id', to: 'admin#show'
   post '/index', to: 'admin#create'
 end
