@@ -1,16 +1,4 @@
 class ResortController < ApplicationController
-    def test
-        list="JSONの出力はできてるよ"
-        render json:list
-    end
-    def index
-        list="テスト中"
-        render json:list
-    end
-    # def db
-    #     list=Gerende.first(12)
-    #     render json:list
-    # end
     def list1
         list=Gerende.where("id  >= ?", 1).where("id <=?",12)
         render json:list
