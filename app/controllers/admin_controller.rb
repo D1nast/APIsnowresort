@@ -12,7 +12,7 @@ class AdminController < ApplicationController
         render json: data
     end 
     def edit
-        Gerende.create(index_params)
+        Gerende.update(index_params)
         head :created
     end
     private
