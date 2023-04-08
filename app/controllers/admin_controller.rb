@@ -19,6 +19,9 @@ class AdminController < ApplicationController
         data.save
         head :created
     end
+    def check_params
+        render plain: params.inspect
+    end
     private
      def index_params
        params.require(:gerende).permit(:id, :name, :explain1)
