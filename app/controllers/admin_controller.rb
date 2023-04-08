@@ -12,7 +12,7 @@ class AdminController < ApplicationController
         render json: data
     end 
     def update
-        data=Gerende.find_by(params[:id])
+        data=Gerende.find_by(id:params[:id])
         data.name=params[:name]
         data.explain1=params[:explain1]
         data.url=params[:url]
