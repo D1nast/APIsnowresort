@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get '/edit/:id', to: 'admin#show'
   post '/index', to: 'admin#create'
   post '/edit/:id/update', to: 'admin#update'
+  #：は動的なパラメータを取得できる
 end

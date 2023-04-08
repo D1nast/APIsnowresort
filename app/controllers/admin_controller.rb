@@ -18,6 +18,7 @@ class AdminController < ApplicationController
         data.url=params[:url]
         data.save
         head :created
+        render json: parameters
     end
     private
      def index_params
