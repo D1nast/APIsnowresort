@@ -16,6 +16,7 @@ class AdminController < ApplicationController
         data.name=params[:name]
         data.explain1=params[:explain1]
         data.url=params[:url]
+        data.image=params[:image]
         data.save
         head :created
     end
